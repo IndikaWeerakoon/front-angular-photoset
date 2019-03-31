@@ -1,0 +1,57 @@
+.container{
+    max-width: 1000px;
+}
+.title{
+    margin-bottom: 3px;
+    font-family: 'Rubik', sans-serif;
+    color:#535353;
+    letter-spacing: 1px;
+}
+.title span{
+    display: none;
+    
+}
+.title:hover span{
+    display:inline;
+}
+.topic{
+    background: rgba(93, 173, 226, 0.3);
+    color: #2874A6  ;
+    padding: 7px;
+    /* border: 1px solid rgb(78, 153, 202); */
+    border-radius: 5px;
+}
+.decription{
+    font-family: 'Nunito Sans', sans-serif;
+    color: #34495E;
+}
+.note{
+    color: #2E86C1;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.footer{
+    
+    background: #212F3D;
+}
+.footer-word{
+    color: rgb(185, 185, 185);
+    font-size: 12px;
+
+}
+
+@media (max-width :600px){
+    .footer-logo{
+        display: none;
+    }
+
+}
+@media (min-width :600px){
+    .footer-logo{
+        padding: 22px;
+        padding-top: 25px;
+        color: rgb(185, 185, 185);
+        font-size: 40px;
+    }
+}

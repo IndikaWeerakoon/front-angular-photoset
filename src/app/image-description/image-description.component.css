@@ -1,0 +1,32 @@
+.img-card{
+    max-width: 300px;
+}
+.topic{
+    background: rgba(93, 173, 226, 0.3);
+    color: #2874A6  ;
+    padding: 7px;
+    /* border: 1px solid rgb(78, 153, 202); */
+    border-radius: 5px;
+}
+
+.decription{
+    font-family: 'Nunito Sans', sans-serif;
+    color: #34495E;
+}
+.note{
+    color: #2E86C1;
+    font-weight: bold;
+    cursor:pointer;
+}
+.sub-heading{
+    font-size: 12px;
+    color: #AEB6BF;
+}
+.btn{
+    margin-top: 10px;
+}
+@media (max-width:600px){
+    .contain{
+        border-top:1px #D5D8DC solid;
+    }
+}

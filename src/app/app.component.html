@@ -1,20 +1,56 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
+  <div class="card-plain">
+    <div class="card-body pb-0">
+      <h2 class="card-title title">Research Dataset(Selfie) <span style="color: #3498DB">#</span></h2>
+      <p class="card-text topic"><i class="fas fa-star pr-2" style="color: #7FB3D5;"></i> <span style="font-weight: bold">(<span style=" color: #F12F23; 
+        font-weight: normal;">Topic</span>)</span> Reproducing Selfie image by removing suportive hand.</p>
+        <div *ngIf="badResponseMsg"  class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>Upload Fail!</strong> Please Upload image again.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
 
+        <div *ngIf ="recieveStatus.status" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Upload Success!</strong> You contributed <strong>{{recieveStatus.numOfUploadedImg}}</strong> photo/s. <strong>Thank You! </strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+          
+
+      <div class="card-text text-justify decription">In this research, I hope to <span >develop a software</span> in order to <span class="font-weight-bold">customize your 
+          selfie images in very attractive manner</span>.<span class="note" *ngIf="!discripHide" (click)="toggleDescription()">#more</span> 
+          
+         <span *ngIf="discripHide">To success this task, I need a <span class="font-weight-bold">thousands of selfie images</span> 
+        along with its expected image. And these <span class="font-weight-bold"> images should include only one person</span> with 
+        a <span class="font-weight-bold">simple background</span>   such as<span >single wall, set of trees, beach without people</span> . 
+       </span> <span class="note" *ngIf="discripHide" (click)="toggleDescription()">#less</span>
+        <br><br>
+        Please be kind enough to upload selfie images along with its expected image as much as possible with different angles, 
+        at different surroundings. <br><br>
+
+      </div>
+    </div>
+    
+    <app-image-description (outputMsg)="recieveMessage($event)" (outputBadRequst)="badResponse($event)"></app-image-description>
+
+    
+  </div>
+
+</div>
+<div class="footer rounded-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-1 visible"><i class="fas fa-arrow-alt-circle-up footer-logo"></i></div>
+      <div class="col-11">
+          <p class="card-text footer-word  pt-3 mb-1"> Any Information : <b> 071 201 1976</b></p>
+         <p class="card-text footer-word = mb-1"> Develop to upload Images to the <b>cloude API</b> s by <b> WMHI Weerakoon</b>.</p>
+        <p class="card-text footer-word pb-2 "> Powered by <b> Angular + Spring Boot</b>.</p>
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
