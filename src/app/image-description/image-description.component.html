@@ -21,7 +21,7 @@
               <form [formGroup] = "uploadBuilder">
                   <div class="form-group">
                     <label for="exampleFormControlFile1"><b class="decription">Row Selfie Image input</b></label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1" (change)="onFileChange1($event)">
+                    <input type="file" class="form-control-file" accept="image/*" id="exampleFormControlFile1" (change)="onFileChange1($event)">
                   </div>
               </form>
           </div>
@@ -53,7 +53,7 @@
                 <form [formGroup]= 'uploadBuilder2'>
                   <div class="form-group">
                     <label for="exampleFormControlFile1"><b class="decription">Expected Selfie Image input</b></label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1"  
+                    <input type="file" class="form-control-file" accept="image/*" id="exampleFormControlFile1"  
                         (change)="onFileChange2($event)"/>
                         
                   </div>
