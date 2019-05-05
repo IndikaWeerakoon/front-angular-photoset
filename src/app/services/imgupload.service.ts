@@ -9,8 +9,8 @@ import { catchError } from 'rxjs/operators';
 })
 export class ImguploadService {
 
-  apiEndPoint ="https://photo-upload-research.herokuapp.com//api/image/upload";
-  apiEndPoint2 = "https://photo-upload-research.herokuapp.com//api/image/multi/upload";
+  apiEndPoint ="https://morning-crag-43905.herokuapp.com/api/image/upload";
+  apiEndPoint2 = "https://morning-crag-43905.herokuapp.com/api/image/multi/upload";
   constructor(public http:HttpClient) { }
 
   fileUpload (formData :FormData):Observable<Response>{
